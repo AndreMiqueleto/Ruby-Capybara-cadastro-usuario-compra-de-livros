@@ -10,26 +10,35 @@ Quando("submeto o seguinte formulário de cadastro:") do |table|
   @signup_page.create(user)
 end
 
-#remover usuarios
+#Cadastro de multiplos usuarios
 
 Dado("que acesso a página de cadastro e tenho os seguintes usuarios:") do |table|
-  @signup_page.open
-  user = table.hashes.first
+  #@form_attributes = {}
+  @multi_page.open
 
-  #visit current_path
+  #table.map_headers!("Nome" => :nome, "Email" => :email, /Senha( number)?/i => :senha)
+  multi = table.hashes
+  @multi_page.create(multi)
+
+  #table.hashes.each do |valor|
+  #  @user = valor["Jose Henrique"]
+  #  @user = valor["jose@gmail.com"]
+  #  @user = valor["12345678"]
+  #end
+
+  #table.hashes.each do |valor2|
+  #  @user = valor2["Joao Batista"]
+  # @user = valor2["Joao@gmail.com"]
+  # @user = valor2["12345678"]
+  #end
 end
 
-Quando("solicito a exclusão de um usuario especifico") do
-  #@dash_page.request_removal(@equipo[:name])
-  #sleep 1 # think time
+Quando("eu clico no botão cadastrar") do
+  #@signup_page.create(user)
+
 end
 
-Quando("confirmo a exclusão") do
-  #@dash_page.confirm_removal
-end
-
-Então("não devo ver esse item na minha tabela") do
-  #expect(
-  #  @dash_page.has_no_equipo?(@equipo[:name])
-  #).to be true
+Então("devo ver esses usuarios na minha tabela") do |table|
+  # table is a Cucumber::MultilineArgument::DataTable
+  #pending # Write code here that turns the phrase above into concrete actions
 end

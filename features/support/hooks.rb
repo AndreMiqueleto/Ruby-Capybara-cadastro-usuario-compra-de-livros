@@ -3,6 +3,7 @@ Before do
 
   @signup_page = SignupPage.new
   @dash_page = DashPage.new
+  @multi_page = MultiPage.new
   #page.driver.browser.manage.window.maximize
   page.current_window.resize_to(1440, 900)
 end
