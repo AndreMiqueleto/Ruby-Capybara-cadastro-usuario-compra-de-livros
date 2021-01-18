@@ -4,7 +4,7 @@ Funcionalidade: Cadastro
     Desejo realizar o cadastro de novos usuarios
     Para que seja possivel armazenar e gerenciar os dados
 
-    @cadastro
+    @cadastrar
     Cenario: Cadastrar usuarios
 
         Dado que acesso a página de cadastro

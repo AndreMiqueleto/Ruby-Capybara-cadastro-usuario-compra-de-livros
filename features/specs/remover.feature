@@ -8,14 +8,14 @@ Funcionalidade: Remover usuários cadastrados
 
     @temp
     Cenario: Cadastro de multiplos usuarios
-        Dado que acesso a página de cadastro e tenho os seguintes usuarios:
+        Dado que acesso a página para cadastrar multiplos usuários:
+        Quando submeto os usuários abaixo:
             | nome             | email             | senha    |
             | Jose Henrique    | jose@gmail.com    | 12345678 |
             | Joao Batista     | Joao@gmail.com    | 12345678 |
             | Gustavo Pereti   | gustavo@gmail.com | 12345678 |
             | Manuela Joaquina | manu@gmail.com    | 12345678 |
             | Maria da Silva   | maria@gmail.com   | 12345678 |
-        Quando eu clico no botão cadastrar
         Então devo ver esses usuarios na minha tabela
             | Jose Henrique    | jose@gmail.com    | 12345678 |
             | Joao Batista     | Joao@gmail.com    | 12345678 |
