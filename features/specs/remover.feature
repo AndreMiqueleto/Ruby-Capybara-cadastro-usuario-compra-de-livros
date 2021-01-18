@@ -16,11 +16,7 @@ Funcionalidade: Remover usuários cadastrados
             | Gustavo Pereti   | gustavo@gmail.com | 12345678 |
             | Manuela Joaquina | manu@gmail.com    | 12345678 |
             | Maria da Silva   | maria@gmail.com   | 12345678 |
-        Então devo ver esses usuarios na minha tabela
-            | Jose Henrique    | jose@gmail.com    | 12345678 |
-            | Joao Batista     | Joao@gmail.com    | 12345678 |
-            | Gustavo Pereti   | gustavo@gmail.com | 12345678 |
-            | Manuela Joaquina | manu@gmail.com    | 12345678 |
-            | Maria da Silva   | maria@gmail.com   | 12345678 |
+        Então devo ver esses usuarios na tabela
+           
 
 
