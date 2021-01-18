@@ -9,7 +9,7 @@ Funcionalidade: Remover usuários cadastrados
     @temp
     Cenario: Cadastro de multiplos usuarios
         Dado que acesso a página de cadastro e tenho os seguintes usuarios:
-            | Nome             | Email             | Senha    |
+            | nome             | email             | senha    |
             | Jose Henrique    | jose@gmail.com    | 12345678 |
             | Joao Batista     | Joao@gmail.com    | 12345678 |
             | Gustavo Pereti   | gustavo@gmail.com | 12345678 |

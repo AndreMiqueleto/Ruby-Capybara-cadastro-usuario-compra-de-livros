@@ -6,12 +6,11 @@ class MultiPage
   end
 
   def create(multi)
-    multi.each do |multi|
-      find("#name").set user[:nome]
-      find("#email").set user[:email]
-      find("#password").set user[:senha]
+    #puts "multipage usuario" + multi
+    find("#name").set multi[:nome]
+    find("#email").set multi[:email]
+    find("#password").set multi[:senha]
 
-      click_button "Cadastrar"
-    end
+    click_button "Cadastrar"
   end
 end
