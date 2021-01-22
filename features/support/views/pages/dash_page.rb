@@ -1,20 +1,13 @@
 class DashPage
   include Capybara::DSL
 
-  def on_dash?
-    return page.has_css?(".table-title")
-  end
+  def msg
+    within_window @janela do
+      within(".modal-content") do
+        return find(".modal-header").text
+        #return page.has_css?(".modal-header")
 
-  def register
-    return find(".register-form")
-  end
-
-  def has_no_user?(name)
-    return page.has_no_css?(".equipo-list li", text: name)
-  end
-
-  def request_removal(name)
-    equipo = find(".equipo-list li", text: name)
-    equipo.find(".delete-icon").click
+      end
+    end
   end
 end
