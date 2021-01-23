@@ -1,3 +1,7 @@
+Dado("que acesso a página de cadastro") do
+  @cadastro_page.open
+end
+
 Quando("submeto o formulário de cadastro") do
   @cadastro_page.create
 end

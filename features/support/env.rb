@@ -3,7 +3,6 @@ require "capybara"
 require "capybara/cucumber"
 require "cpf_faker"
 require "faker"
-require "byebug"
 
 CONFIG = YAML.load_file(File.join(Dir.pwd, "features/support/config/#{ENV["CONFIG"]}"))
 

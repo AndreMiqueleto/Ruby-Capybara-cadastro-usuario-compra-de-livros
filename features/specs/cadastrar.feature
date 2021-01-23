@@ -13,7 +13,7 @@ Funcionalidade: Cadastro de Pessoas Fisicas
 
     Esquema do Cenario: Tentativa de Cadastro Nome
 
-        Dado que acesso a página de cadastro
+        Dado que acesso a página de cadastro para validar mensagens de erro
         Quando submeto o seguinte formulário de cadastro:
             | nome         | sobrenome         | email         | senha         | conf_senha         | cpf         | sexo         | nascimento         | celular         | cep         | bairro         | endereco         | numero         | telefone         |
             | <nome_input> | <sobrenome_input> | <email_input> | <senha_input> | <conf_senha_input> | <cpf_input> | <sexo_input> | <nascimento_input> | <celular_input> | <cep_input> | <bairro_input> | <endereco_input> | <numero_input> | <telefone_input> |

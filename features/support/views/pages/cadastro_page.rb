@@ -1,6 +1,23 @@
 class Cadastro
   include Capybara::DSL
 
+  def open
+    visit "https://www.saraiva.com.br"
+
+    click_link ("link-account")   #link para Login screen: Entre ou cadastre-se
+
+    #janela recebe a janela que foi aberta pelo link (login)
+    @janela = window_opened_by do
+      click_button ("vtexIdUI-saraiva-oauth")
+    end
+
+    #muda de foco para a janela e clico pra entrar no form de cadastro - funcionouu
+    within_window(@janela) do
+      find(".btn.btn--block.btn-large.m-t-15.cadastrar-usuario").click
+    end
+    #sleep 10
+  end
+
   # para ID usa o "#" e para o class usa o "."
 
   #cria o cenario de cadastro com sucesso (uso da lib faker )
@@ -53,6 +70,7 @@ class Cadastro
     #  find_by_id("FinalizarCadastro1").click
     #click_button "Finalizar Cadastro"
     #end
+
   end
 
   #cria os cenarios com base em massa de testes (validação dos campos obrigatórios)
