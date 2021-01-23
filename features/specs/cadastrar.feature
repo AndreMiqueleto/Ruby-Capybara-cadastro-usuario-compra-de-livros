@@ -1,6 +1,6 @@
 #language: pt
 Funcionalidade: Cadastro de Pessoas Fisicas
-    Eu como pessoa fisica
+            Eu como pessoa fisica
     Desejo realizar o cadastro na loja
     Para que seja possivel comprar produtos
 
@@ -11,7 +11,7 @@ Funcionalidade: Cadastro de Pessoas Fisicas
         Então devo ver a mensagem de cadastro com sucesso
 
 
-   Esquema do Cenario: Tentativa de Cadastro Nome
+    Esquema do Cenario: Tentativa de Cadastro Nome
 
         Dado que acesso a página de cadastro
         Quando submeto o seguinte formulário de cadastro:
@@ -35,5 +35,3 @@ Funcionalidade: Cadastro de Pessoas Fisicas
             | Jorge Manoel    | Martins         | jjorgemanoelmartins@lubeka.com.br                                  | mZWjArH9Uh  | mZWjArH9Uh       | 88696359887 | Masculino  | 03051996         | 19995888756   | 09015999  | Jardim Paulista   | Avenida 13                    |              | 1939003987     | Informe o Número                              |
             | Jorge Manoel    | Martins         | jjorgemanoelmartins@lubeka.com.br                                  | mZWjArH9Uh  | mZWjArH9Uh       | 88696359887 | Masculino  | 03051996         | 19995888756   | 09015999  | Jardim Paulista   | Avenida 13                    | 12345678901  | 1939003987     | Por favor, insira não mais que 10 caracteres. |
             | Lucca Oliver    | Almada          | luccaoliveralmada-95@supercleanlav.com.br                          | qIe8JhUQ9t  | qIe8JhUQ9t       | 20031432891 | Masculino  | 16111989         | 19981536536   | 13880970  | Centro            | Rua Major Correa              | 171          |                | Informe um Telefone válido                    |
-
-

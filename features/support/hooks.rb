@@ -1,8 +1,9 @@
 Before do
   @error = Error.new
 
-  @signup_page = SignupPage.new
-  @dash_page = DashPage.new
+  @cadastro_page = Cadastro.new
+  @open_page = Open.new
+  @cenario_page = Cenario.new
   #page.driver.browser.manage.window.maximize
   page.current_window.resize_to(1440, 900)
 end
