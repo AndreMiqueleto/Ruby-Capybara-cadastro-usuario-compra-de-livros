@@ -4,7 +4,7 @@ class Cadastro
   def open
     visit "https://www.saraiva.com.br"
 
-    click_link ("link-account")   #link para Login screen: Entre ou cadastre-se
+    click_link ("link-account")
 
     #janela recebe a janela que foi aberta pelo link (login)
     @janela = window_opened_by do
@@ -15,10 +15,7 @@ class Cadastro
     within_window(@janela) do
       find(".btn.btn--block.btn-large.m-t-15.cadastrar-usuario").click
     end
-    #sleep 10
   end
-
-  # para ID usa o "#" e para o class usa o "."
 
   #cria o cenario de cadastro com sucesso (uso da lib faker )
   def create
@@ -62,26 +59,18 @@ class Cadastro
       find_by_id("InputComplemento1").set complemento
       find_by_id("InputTelefone1").set contato
       find_by_id("InputPontoReferencia1").set referencia
-      sleep 5
-      #select('Option', from: 'Select Box')
+      #sleep 5
       find_by_id("FinalizarCadastro1").click
     end
-    #@janela = window_opened_by do
-    #  find_by_id("FinalizarCadastro1").click
-    #click_button "Finalizar Cadastro"
-    #end
-
   end
-
-  #cria os cenarios com base em massa de testes (validação dos campos obrigatórios)
 
   def msg_sucesso
     within_window(@janela) do #estou no popup (msg: Solicitação de Cadastro)
-      #sleep necessario para carregar a ultima do header:
-      #Solicitação de Cadastro\nUsuário Cadastrado com sucesso\nVocê será redirecionado para o site em 4
-      sleep 6
-      @mensagem = find(".modal-content").text
-      return @mensagem
+
+      #sleep necessario para carregar o ultima header:
+      #Solicitação de Cadastro\nUsuário Cadastrado com sucesso\nVocê será redirecionado para o site em...
+      sleep 4
+      return find(".modal-content").text
     end
   end
 

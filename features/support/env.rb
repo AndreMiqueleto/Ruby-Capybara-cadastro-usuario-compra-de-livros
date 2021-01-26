@@ -19,10 +19,12 @@ else
   raise "Navegador incorreto :("
 end
 
+Capybara.javascript_driver = :chrome
+
 Capybara.configure do |config|
   config.default_driver = @driver
   config.app_host = CONFIG["url"]
-  config.default_max_wait_time = 10
+  config.default_max_wait_time = 15
 end
 
 AllureCucumber.configure do |config|
