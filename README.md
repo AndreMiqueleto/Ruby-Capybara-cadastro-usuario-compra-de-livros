@@ -21,3 +21,7 @@ cucumber
 Relatórios
 Após o término dos testes, execute no terminal o comando abaixo:
  allure serve logs\
+
+
++ Informações sobre a instalação do Allure:
+https://docs.qameta.io/allure/#_installing_a_commandline
