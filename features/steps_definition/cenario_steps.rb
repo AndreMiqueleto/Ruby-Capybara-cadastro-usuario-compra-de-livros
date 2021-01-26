@@ -9,4 +9,5 @@ end
 
 Então("vejo a mensagem de erro: {string}") do |expect_error|
   expect(@cenario_page.error).to eql expect_error
+  sleep 12
 end

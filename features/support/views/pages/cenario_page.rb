@@ -15,12 +15,9 @@ class Cenario
     within_window(@janela) do
       find(".btn.btn--block.btn-large.m-t-15.cadastrar-usuario").click
     end
-    #sleep 10
   end
 
   def cadastrar(user)
-    #checkpoint com timeout explicito
-    #page.has_css?("#equipoForm")
     within_window(@janela) do
       find_by_id("InputNome1").set user[:nome]
       find_by_id("InputSobrenome1").set user[:sobrenome]
@@ -40,7 +37,6 @@ class Cenario
 
       find_by_id("InputDataNascimento1").set user[:nascimento]
       find_by_id("InputCelular1").set user[:celular]
-      #select_pais(@pais) if @pais.length > 0
       find_by_id("InputCep1").set user[:cep]
       sleep(3)
       find_by_id("InputCep1").send_keys(:tab)
@@ -58,8 +54,6 @@ class Cenario
   end
 
   def error
-    #checkpoint com timeout explicito
-    #page.has_css?("#equipoForm")
     within_window(@janela) do
       return find(:xpath, ".//small[contains(text(),'')]").text
     end
